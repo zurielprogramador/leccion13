@@ -6,7 +6,7 @@
 export const environment = {
     production: false,
     firebase: {
-        apiKey: "AIzaSyDYQkoPp-Q3VYNquXBotayqEb5zMIu51Zs",
+  apiKey: "AIzaSyDYQkoPp-Q3VYNquXBotayqEb5zMIu51Zs",
   authDomain: "firechat-e00c3.firebaseapp.com",
   projectId: "firechat-e00c3",
   storageBucket: "firechat-e00c3.appspot.com",
