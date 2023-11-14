@@ -7,6 +7,8 @@ import {Mensaje}  from "../interface/mensaje.interface";
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import  firebase  from 'firebase/compat/app';
 
+
+
 @Injectable({
   providedIn: 'root'
 })
@@ -34,8 +36,13 @@ export class ChatService {
                }
 
                login( proveedor: string ) {
-                this.afAuth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
-              }
+                if(proveedor ==='google'){
+                  this.afAuth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+                 }else{
+                  if(proveedor ==='twitter'){
+                    this.afAuth.signInWithPopup(new firebase.auth.TwitterAuthProvider());
+                   }
+              }}
               logout() {
                 this.usuario = {};
                 this.afAuth.signOut();
